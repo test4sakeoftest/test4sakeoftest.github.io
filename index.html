@@ -6,47 +6,156 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- myCSS -->
+    <link rel="stylesheet" type="text/css" href="style/login.css">
+    <link rel="stylesheet" type="text/css" href="style/sticky-footer.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    
 </style>
+    
+    <style>
+        p, h1, h2, h3, h4, h5 {
+            color: black;
+        }
+
+        #tooltip1 {
+            position: absolute;
+        }
+
+        #tooltip1 a span {
+            display: none;
+            color: #FFFFFF;
+        }
+
+        #tooltip1 a:hover span {
+            display: block;
+            position: absolute;
+            width: 80px;
+            background: #7184C1;
+            height: 40px;
+            right: -20px;
+            top: -10px;
+            color: #FFFFFF;
+            padding: 0 0px;
+        }
+
+        #tooltip2 {
+            position: relative;
+        }
+
+        #tooltip2 a span {
+            display: none;
+            color: #FFFFFF;
+        }
+
+        #tooltip2 a:hover span {
+            display: block;
+            position: absolute;
+            width: 60px;
+            background: #7184C1;
+            height: 20px;
+            right: 0px;
+            top: 0px;
+            color: #FFFFFF;
+            padding: 0 0px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #95a3d0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #FFFFFF;
+            display: block;
+            transition: 0.3s
+        }
+
+        .sidenav a:hover, .offcanvas a:focus {
+            color: #FFFFFF;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 1;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #bd {
+            transition: margin-right .5s;
+            padding: 0px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
-
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="w3-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-      <i class="fa fa-remove"></i>
-    </a>
-    <div src="/w3images/avatar_g2.jpg" style="height:0;width:80%;padding-bottom:80%;background-color:gray" class="w3-round">
-    </div>
-    <br><br>
-    <h4><b>NAVIGATE</b></h4>
-  </div>
-  <div class="w3-bar-block">
-    <a href="https://yissok.github.io/" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>GUIDE</a> 
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-  </div>
-</nav>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
+    
+    
+    
+    
+<div class="topBar" id="topBar" style="background-color: #950000;">
+    <ul>
+        <li><a href="index.html"><img src="images/logo.png" alt="Logo" width="109px" height="40px" align="middle" vspace="5" hspace="15"/></a>
+        <li>
+            <button class="x" id="rcorners1" onclick="location.href='../strategy/strategy-generation.html'" style="background-color: #953333;">New
+                strategy
+            </button>
+        </li>
+        <li>
+            <button class="x" id="rcorners1" onclick="location.href='../strategy/strategy-management.html'" style="background-color: #954444;">Manage
+                strategy
+            </button>
+        </li>
+        <li style="float:right">
+            <button class="active" id="rcorners1" onclick="location.href='../account/login.html'" style="background-color: #954444;">Login</button>
+        </li>
+    </ul>
+</div>
+    
+    
+    
 <!-- !PAGE CONTENT! -->
- <div class="w3-main" style="margin-left:300px">
+ <div class="w3-main" >
 
   <!-- Header -->
   <header id="portfolio">
     <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()" ><i class="fa fa-bars"></i></span>
     <div class="w3-container">
-    <h1><b>iOS Guide</b></h1>
+        <hr><hr>
+    <h1><b>Browse</b></h1>
     <div class="w3-section w3-bottombar w3-padding-16">
       <span class="w3-margin-right">Filter:</span> 
-      <button class="w3-button w3-black">ALL</button>
-      <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
+      <button class="w3-button w3-red" >ALL</button>
+      <button class="w3-button w3-white"><i class="fa fa-camera-retro w3-margin-right"></i>Videos</button>
       <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
+      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-book w3-margin-right"></i>Other</button>
     </div>
     </div>
   </header>
@@ -124,12 +233,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <hr>
   
   
-    <!-- Pricing Tables -->
+    
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-third w3-margin-bottom">
         <div class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
           <div class="w3-black w3-xlarge w3-padding-32">
-            Beginner
+              <i class="fa fa-envelope w3-margin-right"></i>
+            Contact
           </div>
         </div>
       </div>
@@ -137,7 +247,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <div class="w3-third w3-margin-bottom">
         <div class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
           <div class="w3-teal w3-xlarge w3-padding-32">
-            Intermediate
+              <i class="fa fa-exclamation-triangle w3-margin-right"></i>
+            Report
           </div>
         </div>
       </div>
@@ -145,7 +256,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <div class="w3-third w3-margin-bottom">
         <div class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
           <div class="w3-red w3-xlarge w3-padding-32">
-            Expert
+              <i class="fa fa-cog fa-spin w3-margin-right"></i>
+              
+            Preferences
           </div>
         </div>
       </div>
